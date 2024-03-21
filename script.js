@@ -9,7 +9,7 @@ function draw(){
     smilyFaceCaleb()
 
 
-    //head
+    //shape
     fill("silver");
     circle(100,100,40);
     fill("white");
@@ -20,8 +20,27 @@ function draw(){
     quad(120,155,130,155,132,162,118,162);
     quad(85,150,115,150,110,155,90,155);
     quad(95,155,105,155,110,160,90,160);
+    //head
     fill("blue")
- 
+    stroke("blue")
+    arc(100, 85,23,9,PI,TWO_PI)
+    rect(81,93,38,8,6,6,0,0)
+    rect(97,87,8,7)
+    fill("black")
+    circle(100,90,6)
+    fill("grey")
+    circle(110,97,7)
+    //body
+    fill("blue")
+    rect(90,103,22,2)
+    rect(90,107,22,2)
+    rect(90,111,22,2)
+    rect(97,117,6,12)
+    fill("grey")
+    stroke("grey")
+    rect(98,118,4,4,1,)
+    rect(98,124,4,4,1,)
+
 
 }
 function smilyFaceCaleb(){
