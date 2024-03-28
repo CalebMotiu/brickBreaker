@@ -1,5 +1,11 @@
+let leftAndTop=0;
+let right =800;
+let bottom = 600;
+let calebMoveX=100;
+let calebMoveY=100;
+
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(right, bottom);
 }
 
 function draw() {
@@ -7,9 +13,13 @@ function draw() {
     background("grey")
     smilyFaceEzy(400, 300);
     smilyFaceDavid(200, 100)
-    smilyFaceCaleb(300, 400)
+    smilyFaceCaleb(calebMoveX++, calebMoveY)
     //r2d2()
 
+}
+function verfyMovmentCaleb(){
+    if (calebMoveX >= right || calebMoveX <= leftAndTop)
+    calebMoveX *= -1;
 }
 function smilyFaceCaleb(x, y) {
     stroke("black");
