@@ -1,3 +1,6 @@
+let smilyFaceCalebX = 400;
+let smilyFaceCalebY = 300;
+
 function setup(){
     createCanvas(800,600);
 }
@@ -6,12 +9,18 @@ function draw(){
     //head
     background("grey")
     
-    smilyFaceCaleb(400,500)
+    smilyFaceCaleb(smilyFaceCalebX++,smilyFaceCalebY)
     r2d2()
     smilyFaceDavid(400,300)
    
 
 
+}
+function checkLimitsCaleb(){
+    if(smilyFaceCalebX >= 800)
+        smilyFaceCaleb *= -1;
+    if(smilyFaceCalebX <= 0)
+        smilyFaceCaleb *= -1;
 }
 function smilyFaceCaleb(x,y){
     stroke("black");
@@ -19,17 +28,17 @@ function smilyFaceCaleb(x,y){
     circle(x,y,20);
     //eye
     stroke("black");
-    circle(x-3,x-3,3);
-    circle(x+3,x-3,3);
+    circle(x-3,y-3,3);
+    circle(x+3,y-3,3);
     stroke("blue");
     fill("blue");
-    circle(x-3,x-3,2);
-    circle(x+3,x-3,2);
+    circle(x-3,y-3,2);
+    circle(x+3,y-3,2);
 
     //mouth
     stroke("black")
     fill("red");
-    arc(x,x+3,10,7,0,PI)
+    arc(x,y+3,10,7,0,PI)
 }
 function smilyFaceDavid(x,y){
     stroke("black");
