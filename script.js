@@ -1,3 +1,8 @@
+
+
+let smEzyX=400;
+let smEzyY=300;
+
 function setup() {
     createCanvas(800, 600);
 }
@@ -5,12 +10,14 @@ function setup() {
 function draw() {
     //head
     background("grey")
-    smilyFaceEzy(400, 300);
+    smilyFaceEzy(smEzyX++, smEzyY++);
     smilyFaceDavid(200, 100)
     smilyFaceCaleb(300, 400)
     //r2d2()
-
+    checkLimitsSMEzy();
 }
+
+
 function smilyFaceCaleb(x, y) {
     stroke("black");
     fill("red");
@@ -29,21 +36,26 @@ function smilyFaceCaleb(x, y) {
     fill("red");
     arc(x, y + 3, 10, 7, 0, PI)
 }
+function checkLimitsSMEzy(){
 
+    if(smEzyX >= )
+       smEzyX*=
+
+}
 function smilyFaceEzy(x, y) {
   
-    fill(255, 255, 0);
+    fill(255, 200, 0);
     ellipse(x, y, 50);
 
 
-    fill(0);
-    ellipse(x, y, 50);
-    ellipse(x, y, 50);
+    fill(5,0,0,)
+    ellipse(x-3, y-10, 5);
+    ellipse(x+3, y-10, 5);
 
-    noFill();
+    
     stroke(0);
     //strokeWeight(5);
-    arc(200, 250, 100, 100, 0, PI);
+    arc(x, y, 20, 20, 0, PI);
 }
 
 function smilyFaceDavid(x, y) {
