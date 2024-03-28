@@ -8,6 +8,8 @@ function draw(){
     
     smilyFaceCaleb(400,500)
     r2d2()
+    smilyFaceDavid(400,300)
+   
 
 
 }
@@ -28,6 +30,27 @@ function smilyFaceCaleb(x,y){
     stroke("black")
     fill("red");
     arc(x,x+3,10,7,0,PI)
+}
+function smilyFaceDavid(x,y){
+    stroke("black");
+    fill("yellow");
+    ellipse(x,y,50); // Face ellipse
+  
+    // Drawing the eyes
+    stroke("black");
+    fill("white");
+    ellipse(x-10, y-10, 10 ,10); // Left eye
+    ellipse(x+10, y-10, 10, 10); // Right eye
+    
+    // Pupils
+    fill("red");
+    circle(x-10, y-10, 5);
+    circle(x+10, y-10, 5);
+  
+    // Drawing the mouth
+    noFill();
+    stroke("black");
+    arc(x, y+5, 25, 6, 0, PI); // Smile arc
 }
 function r2d2(){
         //shape
