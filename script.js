@@ -11,14 +11,7 @@ function draw() {
     //r2d2()
 
 }
-function calebParameters(){
-    if(calebMoveX>=edgeLeftAndTop)
-    calebMoveX*= -1;
-    if(calebMoveX<=edgeRight)
-    calebMoveX*= -1;
-}
-
-function smilyFaceCaleb(x,y){
+function smilyFaceCaleb(x, y) {
     stroke("black");
     fill("red");
     circle(x, y, 20);
@@ -36,21 +29,26 @@ function smilyFaceCaleb(x,y){
     fill("red");
     arc(x,y+3,10,7,0,PI)
 }
+function checkLimitsSMEzy(){
 
+    if(smEzyX >= )
+       smEzyX*=
+
+}
 function smilyFaceEzy(x, y) {
   
-    fill(255, 255, 0);
+    fill(255, 200, 0);
     ellipse(x, y, 50);
 
 
-    fill(0);
-    ellipse(x, y, 50);
-    ellipse(x, y, 50);
+    fill(5,0,0,)
+    ellipse(x-3, y-10, 5);
+    ellipse(x+3, y-10, 5);
 
-    noFill();
+    
     stroke(0);
     //strokeWeight(5);
-    arc(200, 250, 100, 100, 0, PI);
+    arc(x, y, 20, 20, 0, PI);
 }
 
 function checkLimitsSMDavid(){
