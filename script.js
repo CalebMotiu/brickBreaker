@@ -6,27 +6,28 @@ function draw(){
     //head
     background("grey")
     
-    smilyFaceCaleb()
+    smilyFaceCaleb(400,500)
     r2d2()
 
+
 }
-function smilyFaceCaleb(){
+function smilyFaceCaleb(x,y){
     stroke("black");
     fill("red");    
-    circle(400,500,20);
+    circle(x,y,20);
     //eye
     stroke("black");
-    circle(397,497,3);
-    circle(403,497,3);
+    circle(x-3,x-3,3);
+    circle(x+3,x-3,3);
     stroke("blue");
     fill("blue");
-    circle(397,497,2);
-    circle(403,497,2);
+    circle(x-3,x-3,2);
+    circle(x+3,x-3,2);
 
     //mouth
     stroke("black")
     fill("red");
-    arc(400,503,10,7,0,PI)
+    arc(x,x+3,10,7,0,PI)
 }
 function r2d2(){
         //shape
