@@ -1,13 +1,21 @@
+let tableWidth=800;
+let tableHeight=600;
+let directionX=1;
+let smDavidX=200;
+let smDavidY=100;
+
+
 function setup() {
-    createCanvas(800, 600);
+    createCanvas(tableWidth, tableHeight);
 }
 
 function draw() {
     //head
     background("grey")
     smilyFaceEzy(400, 300);
-    smilyFaceDavid(200, 100)
+    smilyFaceDavid(smDavidX,smDavidY)
     smilyFaceCaleb(300, 400)
+    checkLimitsSMDavid();
     //r2d2()
 
 }
@@ -44,6 +52,12 @@ function smilyFaceEzy(x, y) {
     stroke(0);
     //strokeWeight(5);
     arc(200, 250, 100, 100, 0, PI);
+}
+
+function checkLimitsSMDavid(){
+    if(smDavidX>=tableWidth)
+        smDavidX++;
+    
 }
 
 function smilyFaceDavid(x, y) {
