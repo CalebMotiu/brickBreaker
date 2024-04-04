@@ -1,10 +1,11 @@
 let leftAndTop=0;
 let right =800;
 let bottom = 600;
-
+let davidMoveX=200;
+let davidMoveY=200;
 let calebPointX = 100;
 let calebPointY = 100;
-
+let directionDavidX=10;
 let calebMoveX=10;
 
 function setup() {
@@ -15,9 +16,11 @@ function draw() {
     //head
     background("grey")
     smilyFaceEzy(400, 300);
-    smilyFaceDavid(200, 100)
+    smilyFaceDavid(davidMoveX, davidMoveY);
+    
     smilyFaceCaleb(calebPointX, calebPointY)
     verfyMovmentCaleb();
+    checkLimitsSMDavid();
     
     //r2d2()
 
@@ -71,8 +74,10 @@ function smilyFaceEzy(x, y) {
 }
 
 function checkLimitsSMDavid(){
-    if(smDavidX>=tableWidth)
-        smDavidX++;
+    if (davidMoveX >= right || davidMoveX <= leftAndTop)
+        directionDavidX*=-1;
+
+    davidMoveX+=directionDavidX;
     
 }
 
