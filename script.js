@@ -5,7 +5,7 @@ let davidMoveX=200;
 let davidMoveY=200;
 let calebPointX = 100;
 let calebPointY = 100;
-
+let directionDavidX=10;
 let calebMoveX=10;
 
 function setup() {
@@ -71,10 +71,10 @@ function smilyFaceEzy(x, y) {
 }
 
 function checkLimitsSMDavid(){
-    if(smDavidX>=tableWidth)
+    if (davidMoveX >= right || davidMoveX <= leftAndTop)
         directionDavidX*=-1;
 
-    smDavidX+=directionDavidX;
+    davidMoveX+=directionDavidX;
     
 }
 
