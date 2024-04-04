@@ -7,7 +7,9 @@ let calebPointX = 100;
 let calebPointY = 100;
 let directionDavidX=10;
 let calebMoveX=10;
-
+let ezyMoveX=300;
+let ezyMoveY=300;
+let directionEzyX=10;
 function setup() {
     createCanvas(right, bottom);
 }
@@ -15,13 +17,13 @@ function setup() {
 function draw() {
     //head
     background("grey")
-    smilyFaceEzy(400, 300);
+    smilyFaceEzy(  ezyMoveX,ezyMoveY);
     smilyFaceDavid(davidMoveX, davidMoveY);
     
     smilyFaceCaleb(calebPointX, calebPointY)
     verfyMovmentCaleb();
     checkLimitsSMDavid();
-    
+    verfyMovmentEzy();
     //r2d2()
 
 }
@@ -49,11 +51,11 @@ function smilyFaceCaleb(x, y) {
     fill("red");
     arc(x,y+3,10,7,0,PI)
 }
-function checkLimitsSMEzy(){
+function verfyMovmentEzy(){
+    if (ezyMoveX >= right || ezyMoveX <= leftAndTop)
+    {directionEzyX *= -1;}
 
-    if(smEzyX>=tableWidth)
-    smEzyX++;
-
+    ezyMoveX += directionEzyX;
 }
 
 
