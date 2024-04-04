@@ -1,12 +1,18 @@
 let leftAndTop=0;
 let right =800;
 let bottom = 600;
+
+
 let davidMoveX=200;
 let davidMoveY=200;
+let directionDavidX=10;
+
+
 let calebPointX = 100;
 let calebPointY = 150;
-let directionDavidX=10;
 let calebMoveX=10;
+let calebMoveY=10;
+
 let ezyMoveX=300;
 let ezyMoveY=300;
 let directionEzyX=10;
