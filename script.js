@@ -3,8 +3,9 @@ let right =800;
 let bottom = 600;
 let calebMoveX=100;
 let calebMoveY=100;
-let davidMoveX=100;
-let davidMoveY=100;
+let davidMoveX=200;
+let davidMoveY=300;
+let directionDavidX=1;
 
 function setup() {
     createCanvas(right, bottom);
@@ -14,9 +15,10 @@ function draw() {
     //head
     background("grey")
     smilyFaceEzy(400, 300);
-    smilyFaceDavid(davidMoveX++, davidMoveY);
-    checkLimitsSMDavid();
+    smilyFaceDavid(davidMoveX, davidMoveY);
+    
     smilyFaceCaleb(calebMoveX++, calebMoveY)
+    checkLimitsSMDavid();
     //r2d2()
 
 }
@@ -44,8 +46,8 @@ function smilyFaceCaleb(x, y) {
 }
 function checkLimitsSMEzy(){
 
-     if(smEzyX >= )
-        smEzyX*
+    //if(smEzyX >= )
+      // smEzyX*=
 
 }
 function smilyFaceEzy(x, y) {
@@ -66,9 +68,9 @@ function smilyFaceEzy(x, y) {
 
 function checkLimitsSMDavid(){
     if(smDavidX>=tableWidth)
-        smDavidX*=-1;
+        directionDavidX*=-1;
 
-    smDavidX
+    smDavidX+=directionDavidX;
     
 }
 
