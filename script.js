@@ -14,6 +14,7 @@ function draw() {
     smilyFaceEzy(400, 300);
     smilyFaceDavid(200, 100)
     smilyFaceCaleb(calebMoveX++, calebMoveY)
+    
     //r2d2()
 
 }
@@ -41,10 +42,12 @@ function smilyFaceCaleb(x, y) {
 }
 function checkLimitsSMEzy(){
 
-    //if(smEzyX >= )
-      // smEzyX*=
+    if(smEzyX>=tableWidth)
+    smEzyX++;
 
 }
+
+
 function smilyFaceEzy(x, y) {
   
     fill(255, 200, 0);
