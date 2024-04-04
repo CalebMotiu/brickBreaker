@@ -2,6 +2,7 @@ let leftAndTop=0;
 let right =800;
 let bottom = 600;
 
+<<<<<<< HEAD
 let calebPointX = 100;
 let calebPointY = 100;
 
@@ -9,6 +10,9 @@ let calebMoveX=10;
 let ezyMoveX=300;
 let ezyMoveY=300;
 let directionEzyX=10;
+=======
+
+>>>>>>> eddad47706050e2f2513669151e915e44f02255c
 function setup() {
     createCanvas(right, bottom);
 }
@@ -26,10 +30,8 @@ function draw() {
     //r2d2()
 
 }
-function verfyMovmentCaleb(){
-    if (calebPointX >= right || calebPointX <= leftAndTop)
-    {calebMoveX *= -1;}
 
+<<<<<<< HEAD
     calebPointX += calebMoveX;
 }
 function smilyFaceCaleb(x, y) {
@@ -74,6 +76,8 @@ function smilyFaceEzy(x, y) {
     arc(x, y, 20, 20, 0, PI);
 }
 
+=======
+>>>>>>> eddad47706050e2f2513669151e915e44f02255c
 
 
 function r2d2() {
