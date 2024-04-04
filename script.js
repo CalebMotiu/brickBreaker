@@ -4,9 +4,10 @@ let bottom = 600;
 let davidMoveX=200;
 let davidMoveY=200;
 let calebPointX = 100;
-let calebPointY = 100;
+let calebPointY = 150;
 let directionDavidX=10;
 let calebMoveX=10;
+let calebMoveY=10;
 
 function setup() {
     createCanvas(right, bottom);
@@ -29,6 +30,11 @@ function verfyMovmentCaleb(){
     {calebMoveX *= -1;}
 
     calebPointX += calebMoveX;
+
+    if (calebPointY >= bottom || calebPointY <= leftAndTop)
+    {calebMoveY *= -1;}
+
+    calebPointY += calebMoveY;
 }
 function smilyFaceCaleb(x, y) {
     stroke("black");
