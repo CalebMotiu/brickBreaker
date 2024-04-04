@@ -2,11 +2,11 @@
 let smCaleb={
 x : 100,
 y : 150,
-diameter:50,
+diameter:20,
 moveX:1,
 moveY:1,
 speedX:5,
-speedY:10
+speedY:5
 };
 function verfyMovmentCaleb(){
     if (smCaleb.x >= right-(smCaleb.diameter/2) || smCaleb.x <= leftAndTop+(smCaleb.diameter/2))
@@ -25,15 +25,12 @@ function smilyFaceCaleb(x, y) {
     circle(x, y, smCaleb.diameter);
     //eye
     stroke("black");
-    circle(x-3,y-3,5);
-    circle(x+3,y-3,5);
-    stroke("blue");
     fill("blue");
-    circle(x-3,y-3,4);
-    circle(x+3,y-3,4);
+    circle(x-smCaleb.diameter/10,y-smCaleb.diameter/10,smCaleb.diameter/5);
+    circle(x+smCaleb.diameter/10,y-smCaleb.diameter/10,smCaleb.diameter/5);
 
     //mouth
     stroke("black")
     fill("red");
-    arc(x,y+3,10,7,0,PI)
+    arc(x,y+smCaleb.diameter/10,10,7,0,PI)
 }
