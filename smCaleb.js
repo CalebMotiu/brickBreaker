@@ -1,18 +1,20 @@
-let calebPointX = 100;
-let calebPointY = 150;
-let calebMoveX=10;
-let calebMoveY=10;
 
+let smCaleb={
+x : 100,
+y : 150,
+moveX:10,
+moveY:10
+};
 function verfyMovmentCaleb(){
-    if (calebPointX >= right || calebPointX <= leftAndTop)
-    {calebMoveX *= -1;}
+    if (smCaleb.x >= right || smCaleb.x <= leftAndTop)
+    {smCaleb.moveX *= -1;}
 
-    calebPointX += calebMoveX;
+    smCaleb.x += smCaleb.moveX;
 
-    if (calebPointY >= bottom || calebPointY <= leftAndTop)
-    {calebMoveY *= -1;}
+    if (smCaleb.y >= bottom || smCaleb.y <= leftAndTop)
+    {smCaleb.moveY *= -1;}
 
-    calebPointY += calebMoveY;
+    smCaleb.y += smCaleb.moveY;
 }
 function smilyFaceCaleb(x, y) {
     stroke("black");

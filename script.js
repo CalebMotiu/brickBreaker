@@ -12,7 +12,7 @@ function draw() {
     smilyFaceEzy(  ezyMove.x,ezyMove.y);
     smilyFaceDavid(davidMove.x, davidMove.y);
     
-    smilyFaceCaleb(calebPointX, calebPointY)
+    smilyFaceCaleb(smCaleb.x, smCaleb.y)
     verfyMovmentCaleb();
     checkLimitsSMDavid();
     verfyMovmentEzy();
