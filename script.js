@@ -3,17 +3,6 @@ let right =800;
 let bottom = 600;
 
 
-let davidMoveX=200;
-let davidMoveY=200;
-let directionDavidX=10;
-
-
-let calebPointX = 100;
-let calebPointY = 150;
-let calebMoveX=10;
-let calebMoveY=10;
-
-
 function setup() {
     createCanvas(right, bottom);
 }
@@ -30,66 +19,7 @@ function draw() {
     //r2d2()
 
 }
-function verfyMovmentCaleb(){
-    if (calebPointX >= right || calebPointX <= leftAndTop)
-    {calebMoveX *= -1;}
 
-    calebPointX += calebMoveX;
-
-    if (calebPointY >= bottom || calebPointY <= leftAndTop)
-    {calebMoveY *= -1;}
-
-    calebPointY += calebMoveY;
-}
-function smilyFaceCaleb(x, y) {
-    stroke("black");
-    fill("red");
-    circle(x, y, 20);
-    //eye
-    stroke("black");
-    circle(x-3,y-3,3);
-    circle(x+3,y-3,3);
-    stroke("blue");
-    fill("blue");
-    circle(x-3,y-3,2);
-    circle(x+3,y-3,2);
-
-    //mouth
-    stroke("black")
-    fill("red");
-    arc(x,y+3,10,7,0,PI)
-}
-
-
-function checkLimitsSMDavid(){
-    if (davidMoveX >= right || davidMoveX <= leftAndTop)
-        directionDavidX*=-1;
-
-    davidMoveX+=directionDavidX;
-    
-}
-
-function smilyFaceDavid(x, y) {
-    stroke("black");
-    fill("yellow");
-    ellipse(x, y, 50); // Face ellipse
-
-    // Drawing the eyes
-    stroke("black");
-    fill("white");
-    ellipse(x - 10, y - 10, 10, 10); // Left eye
-    ellipse(x + 10, y - 10, 10, 10); // Right eye
-
-    // Pupils
-    fill("red");
-    circle(x - 10, y - 10, 5);
-    circle(x + 10, y - 10, 5);
-
-    // Drawing the mouth
-    noFill();
-    stroke("black");
-    arc(x, y + 5, 25, 6, 0, PI); // Smile arc
-}
 
 
 function r2d2() {
