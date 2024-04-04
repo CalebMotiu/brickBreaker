@@ -1,12 +1,14 @@
-let davidMoveX=200;
-let davidMoveY=200;
-let directionDavidX=10;
+let davidMove = {
+    x: 200,
+    y: 200,
+    direction: 1
+}
 
 function checkLimitsSMDavid(){
-    if (davidMoveX >= right || davidMoveX <= leftAndTop)
-        directionDavidX*=-1;
+    if (davidMove.x>= right || davidMove.x<= leftAndTop)
+        davidMove.direction*=-1;
 
-    davidMoveX+=directionDavidX;
+    davidMove.x+=davidMove.direction;
     
 }
 
