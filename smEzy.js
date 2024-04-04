@@ -1,13 +1,16 @@
-let ezyMoveX=300;
-let ezyMoveY=300;
-let directionEzyX=10;
+let ezyMove={
+    x: 300,
+    y:300,
+    directionX: 1
+}
+
 
 
 function verfyMovmentEzy(){
-    if (ezyMoveX >= right || ezyMoveX <= leftAndTop)
-    {directionEzyX *= -1;}
+    if (ezyMove.x >= right || ezyMove.x <= leftAndTop)
+    {ezyMove.directionX *= -1;}
 
-    ezyMoveX += directionEzyX;
+    ezyMove.x += ezyMove.directionX;
 }
 
 

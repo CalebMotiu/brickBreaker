@@ -9,7 +9,7 @@ function setup() {
 function draw() {
     //head
     background("grey")
-    smilyFaceEzy(  ezyMoveX,ezyMoveY);
+    smilyFaceEzy(  ezyMove.x,ezyMove.y);
     smilyFaceDavid(davidMove.x, davidMove.y);
     
     smilyFaceCaleb(smCaleb.x, smCaleb.y)
