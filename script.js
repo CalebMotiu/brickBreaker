@@ -16,6 +16,7 @@ function draw() {
     verfyMovmentCaleb();
     checkLimitsSMDavid();
     verfyMovmentEzy();
+    drawPaddleCaleb();
     //r2d2()
 
 }
