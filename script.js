@@ -41,8 +41,8 @@ function smilyFaceCaleb(x, y) {
 }
 function checkLimitsSMEzy(){
 
-    if(smEzyX >= )
-       smEzyX*=
+    //if(smEzyX >= )
+      // smEzyX*=
 
 }
 function smilyFaceEzy(x, y) {
