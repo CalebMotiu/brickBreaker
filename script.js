@@ -10,7 +10,7 @@ function draw() {
     //head
     background("grey")
     smilyFaceEzy(  ezyMoveX,ezyMoveY);
-    smilyFaceDavid(davidMoveX, davidMoveY);
+    smilyFaceDavid(davidMove.x, davidMove.y);
     
     smilyFaceCaleb(smCaleb.x, smCaleb.y)
     verfyMovmentCaleb();
