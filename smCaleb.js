@@ -2,19 +2,20 @@
 let smCaleb={
 x : 100,
 y : 150,
-moveX:10,
-moveY:10
+moveX:1,
+moveY:1,
+speed:100
 };
 function verfyMovmentCaleb(){
     if (smCaleb.x >= right || smCaleb.x <= leftAndTop)
     {smCaleb.moveX *= -1;}
 
-    smCaleb.x += smCaleb.moveX;
+    smCaleb.x += smCaleb.moveX * smCaleb.speed;
 
     if (smCaleb.y >= bottom || smCaleb.y <= leftAndTop)
     {smCaleb.moveY *= -1;}
 
-    smCaleb.y += smCaleb.moveY;
+    smCaleb.y += smCaleb.moveY* smCaleb.speed;
 }
 function smilyFaceCaleb(x, y) {
     stroke("black");
