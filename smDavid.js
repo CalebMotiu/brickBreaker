@@ -3,40 +3,42 @@ let davidMove = {
     y: 200,
     directionX: 1,
     directionY: 1,
-    speed: 3
+    speedX: 0.001,
+    speedY: 0.001,
+    ray: 25
 }
 
 function checkLimitsSMDavid(){
-    if (davidMove.x>= right || davidMove.x<= leftAndTop)
+    if (davidMove.x>= right - davidMove.ray || davidMove.x<= leftAndTop + davidMove.ray)
         davidMove.directionX*=-1;
 
-    davidMove.x+=davidMove.directionX * davidMove.speed;
+    davidMove.x+=davidMove.directionX * davidMove.speedX;
 
-    if (davidMove.y>= bottom || davidMove.y<= leftAndTop)
+    if (davidMove.y>= bottom - davidMove.ray|| davidMove.y<= leftAndTop + davidMove.ray)
         davidMove.directionY*=-1;
 
-    davidMove.y+=davidMove.directionY * davidMove.speed;
+    davidMove.y+=davidMove.directionY * davidMove.speedY;
     
 }
 
 function smilyFaceDavid(x, y) {
     stroke("black");
     fill("yellow");
-    ellipse(x, y, 50); // Face ellipse
+    ellipse(x, y, davidMove.ray*2); // Face ellipse
 
     // Drawing the eyes
     stroke("black");
     fill("white");
-    ellipse(x - 10, y - 10, 10, 10); // Left eye
-    ellipse(x + 10, y - 10, 10, 10); // Right eye
+    ellipse(x - (davidMove.ray*2)/5, y - (davidMove.ray*2)/5, (davidMove.ray*2)/5, (davidMove.ray*2)/5); // Left eye
+    ellipse(x + (davidMove.ray*2)/5, y - (davidMove.ray*2)/5, (davidMove.ray*2)/5, (davidMove.ray*2)/5); // Right eye
 
     // Pupils
     fill("red");
-    circle(x - 10, y - 10, 5);
-    circle(x + 10, y - 10, 5);
+    circle(x -(davidMove.ray*2)/5, y - (davidMove.ray*2)/5, (davidMove.ray*2)/10);
+    circle(x +(davidMove.ray*2)/5, y - (davidMove.ray*2)/5, (davidMove.ray*2)/10);
 
     // Drawing the mouth
     noFill();
     stroke("black");
-    arc(x, y + 5, 25, 6, 0, PI); // Smile arc
+    arc(x, y + davidMove.ray/5, davidMove.ray, (davidMove.ray*2)*12/100, 0, PI); // Smile arc
 }
