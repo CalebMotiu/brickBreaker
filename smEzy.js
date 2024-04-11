@@ -14,8 +14,14 @@ function verfyMovmentEzy(){
     {ezyMove.directionX *= -1;}
 
     ezyMove.x += ezyMove.directionX * ezyMove.speed;
+    
     if (ezyMove.y >= bottom - ezyMove.ray || ezyMove.y <= leftAndTop +ezyMove.ray)
     {ezyMove.directionY *= -1;}
+    
+    
+    if(smEzy.y >= pdEzy.y - smEzy.ray && smEzy.x >= pdEzy.x + smEzy.ray && smEzy.x <= pdEzy.x + pdEzy.width-smEzy.ray){
+        smEzy.directionY *= -1;
+    }
     ezyMove.y += ezyMove.directionY * ezyMove.speed;
 }
 

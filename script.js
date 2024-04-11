@@ -12,10 +12,11 @@ function draw() {
     smilyFaceEzy(  ezyMove.x,ezyMove.y);
     smilyFaceDavid(davidMove.x, davidMove.y);
     
-    smilyFaceCaleb(smCaleb.x, smCaleb.y)
+    //smilyFaceCaleb(smCaleb.x, smCaleb.y)
     verfyMovmentCaleb();
     checkLimitsSMDavid();
     verfyMovmentEzy();
+    createPaddleEzy();
     //r2d2()
 
 }

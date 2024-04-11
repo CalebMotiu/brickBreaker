@@ -3,8 +3,8 @@ let davidMove = {
     y: 200,
     directionX: 1,
     directionY: 1,
-    speedX: 0.001,
-    speedY: 0.001,
+    speedX: 0.1,
+    speedY: 2.1,
     ray: 25
 }
 
