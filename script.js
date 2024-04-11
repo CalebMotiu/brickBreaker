@@ -9,13 +9,15 @@ function setup() {
 function draw() {
     //head
     background("grey")
+
     smilyFaceEzy(  ezyMove.x,ezyMove.y);
     smilyFaceDavid(davidMove.x, davidMove.y);
-    
     smilyFaceCaleb(smCaleb.x, smCaleb.y)
+
     verfyMovmentCaleb();
     checkLimitsSMDavid();
     verfyMovmentEzy();
+
     drawPaddleCaleb();
     //r2d2()
 

@@ -8,6 +8,7 @@ moveY:1,
 speedX:5,
 speedY:5
 };
+
 function verfyMovmentCaleb(){
     if (smCaleb.x >= right-(smCaleb.diameter/2) || smCaleb.x <= leftAndTop+(smCaleb.diameter/2))
     {smCaleb.moveX *= -1;}

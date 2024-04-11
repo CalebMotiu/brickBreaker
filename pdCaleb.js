@@ -1,7 +1,7 @@
 let pdCaleb = {
     x:20,
-    y:20,
-    width: 20,
+    y:450,
+    width: 50,
     height: 5
 
 }
