@@ -17,7 +17,8 @@ function draw() {
     //smilyFaceCaleb(smCaleb.x, smCaleb.y)
     //verfyMovmentCaleb();
     checkLimitsSMDavid();
-    //verfyMovmentEzy();
+    verfyMovmentEzy();
+    drawPaddleCaleb();
     //r2d2()
     createPaddleDavid();
 }
