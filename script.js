@@ -4,12 +4,13 @@ let bottom = 600;
 
 function setup() {
     createCanvas(right, bottom);
+    noCursor();
+    initBricksCaleb()
 }
 
 function draw() {
     //head
     background("grey")
-
     smilyFaceEzy(  ezyMove.x,ezyMove.y);
     smilyFaceDavid(davidMove.x, davidMove.y);
     smilyFaceCaleb(smCaleb.x, smCaleb.y)
@@ -19,8 +20,9 @@ function draw() {
     verfyMovmentEzy();
 
     drawPaddleCaleb();
-    //r2d2()
+    createPaddleDavid();
 
+    createBricksCaleb()
 }
 
 
