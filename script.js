@@ -5,7 +5,7 @@ let bottom = 600;
 function setup() {
     createCanvas(right, bottom);
     noCursor();
-    initBricksCaleb()
+    initBricksCaleb();
 }
 
 function draw() {
