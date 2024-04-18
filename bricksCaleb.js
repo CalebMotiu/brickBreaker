@@ -1,12 +1,12 @@
 let bricksCaleb = []
 
 const margin = 10
-const distanceBetweenBricks = 10
+const distanceBetweenBricksCaleb = 10
 
 const numberOfColumns = 4
 const numberOfRows = 8
 
-const brickWidth = Math.floor((right - margin * 2 - (numberOfRows - 1) * distanceBetweenBricks)/numberOfRows);
+const brickWidthCaleb = Math.floor((right - margin * 2 - (numberOfRows - 1) * distanceBetweenBricksCaleb)/numberOfRows);
 
 
 function initBricksCaleb() {
@@ -15,7 +15,7 @@ function initBricksCaleb() {
         {
             const row = Math.floor(i/numberOfRows) + 1;
 
-            x = x + brickWidth + distanceBetweenBricks;
+            x = x + brickWidthCaleb + distanceBetweenBricksCaleb;
             if (i % numberOfRows == 0)
                 x = margin;
         
@@ -24,7 +24,7 @@ function initBricksCaleb() {
                 x,
                 y: row * 30,
                 color: "red",
-                width: brickWidth,
+                width: brickWidthCaleb,
                 height: 20,
                 row
             })
