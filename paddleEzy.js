@@ -3,10 +3,10 @@ let pdEzy = {
     y:450,
     width: 50,
     height: 5
-
-}
-
-function drawPaddleEzy(){
+ 
+ }
+ 
+ function drawPaddleEzy(){
     fill("red")
     rect(mouseX, pdEzy.y , pdEzy.width , pdEzy.height )
-}
+ }
