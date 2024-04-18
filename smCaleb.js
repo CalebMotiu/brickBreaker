@@ -5,9 +5,10 @@ y : 150,
 diameter:20,
 moveX:1,
 moveY:1,
-speedX:5,
+speedX:10,
 speedY:5
 };
+
 function verfyMovmentCaleb(){
     if (smCaleb.x >= right-(smCaleb.diameter/2) || smCaleb.x <= leftAndTop+(smCaleb.diameter/2))
     {smCaleb.moveX *= -1;}
@@ -17,7 +18,17 @@ function verfyMovmentCaleb(){
     if (smCaleb.y >= bottom-(smCaleb.diameter/2) || smCaleb.y <= leftAndTop+(smCaleb.diameter/2))
     {smCaleb.moveY *= -1;}
 
-    smCaleb.y += smCaleb.moveY* smCaleb.speedY;
+    if (
+        smCaleb.y >= pdCaleb.y - (smCaleb.diameter / 2) &&
+        smCaleb.y <= pdCaleb.y + pdCaleb.height &&
+        smCaleb.x >= pdCaleb.x - (smCaleb.diameter / 2) &&
+        smCaleb.x <= pdCaleb.x + (pdCaleb.width + smCaleb.diameter / 2)
+      ) {
+        smCaleb.moveY *= -1;
+      }
+
+      smCaleb.y += smCaleb.moveY * smCaleb.speedY;
+
 }
 function smilyFaceCaleb(x, y) {
     stroke("black");
