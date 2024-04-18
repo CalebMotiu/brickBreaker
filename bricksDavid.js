@@ -1,23 +1,26 @@
 let bricksDavid = []
 
-const margin = 10;
+const distanceBetweenBricks = 10;
+const marginDavid = 10;
 const brickRowDavid = 1
-const numberOfRowsDavid = 4
+const numberOfRowsDavid = 1
+
+const brickWidth = Math.floor(right - marginDavid * 2 - (numberOfRowsDavid - 1) * distanceBetweenBricks) / brickRowDavid;
 
 function initBricksDavid() {
-    let x = 0;
+    let x = marginDavid;
     for (let i = 0; i < brickRowDavid * numberOfRowsDavid; i++) {
         const row = Math.floor(i / numberOfRowsDavid) + 1;
         let x = 0;
         if (i % numberOfRowsDavid == 0)
             x = 0;
-        x = x + 70;
+        x = x + brickWidth + distanceBetweenBricks;
         bricksDavid.push({
             hit: false,
             x,
             y: row * 15,
             color: "blue",
-            width: 50,
+            width: brickWidth,
             height: 20,
             row: row,
         })
