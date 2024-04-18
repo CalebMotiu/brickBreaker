@@ -4,20 +4,20 @@ let bottom = 600;
 
 function setup() {
     createCanvas(right, bottom);
-    noCursor();
+    //noCursor();
 }
 
 function draw() {
     //head
     background("grey")
     
-    //smilyFaceEzy(  ezyMove.x,ezyMove.y);
+    smilyFaceEzy(  ezyMove.x,ezyMove.y);
     smilyFaceDavid(davidMove.x, davidMove.y);
     
     //smilyFaceCaleb(smCaleb.x, smCaleb.y)
     verfyMovmentCaleb();
     checkLimitsSMDavid();
-    verfyMovmentEzy();
+    checkLimitsSMEzy();
     drawPaddleCaleb();
     createPaddleEzy();
     //r2d2()
