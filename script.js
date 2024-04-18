@@ -1,27 +1,31 @@
-let leftAndTop=0;
-let right =800;
+let leftAndTop = 0;
+let right = 800;
 let bottom = 600;
 
 function setup() {
     createCanvas(right, bottom);
-    //noCursor();
+    noCursor();
+    initBricksCaleb()
+    
 }
 
 function draw() {
     //head
     background("grey")
-    
-    smilyFaceEzy(  ezyMove.x,ezyMove.y);
+    smilyFaceEzy(ezyMove.x, ezyMove.y);
     smilyFaceDavid(davidMove.x, davidMove.y);
     
-    //smilyFaceCaleb(smCaleb.x, smCaleb.y)
+    smilyFaceCaleb(smCaleb.x, smCaleb.y)
     verfyMovmentCaleb();
     checkLimitsSMDavid();
-    checkLimitsSMEzy();
+    checkLimitsSMEzy()
     drawPaddleCaleb();
-    createPaddleEzy();
     //r2d2()
     createPaddleDavid();
+    createPaddleEzy()
+    createBricksCaleb()
+    createBricksEzy()
+    
 }
 
 
