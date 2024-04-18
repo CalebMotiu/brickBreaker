@@ -5,6 +5,7 @@ let bottom = 600;
 function setup() {
     createCanvas(right, bottom);
     noCursor();
+    //initBricks();
 }
 
 function draw() {
@@ -18,7 +19,7 @@ function draw() {
     //verfyMovmentCaleb();
     checkLimitsSMDavid();
     verfyMovmentEzy();
-    drawPaddleCaleb();
+    //drawPaddleCaleb();
     //r2d2()
     createPaddleDavid();
 }
