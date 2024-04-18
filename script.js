@@ -4,9 +4,10 @@ let bottom = 600;
 
 function setup() {
     createCanvas(right, bottom);
-    noCursor();
-    //initBricksCaleb()
+    //noCursor();
+    //initBricksCaleb();
     initBricksDavid();
+    
 }
 
 function draw() {
@@ -23,7 +24,10 @@ function draw() {
     drawPaddleCaleb();
     createPaddleDavid();
 
-    createBricksDavid()
+
+    createBricksDavid();
+  
+   
 }
 
 
