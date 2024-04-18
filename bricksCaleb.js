@@ -1,22 +1,34 @@
 let bricksCaleb = []
 
-const brickRowCaleb = 1
-const brickColumnCaleb = 1
-const numberOfRows = 4
+const margin = 10
+const distanceBetweenBricksCaleb = 10
+
+const numberOfColumns = 4
+const numberOfRows = 8
+
+const brickWidthCaleb = Math.floor((right - margin * 2 - (numberOfRows - 1) * distanceBetweenBricksCaleb)/numberOfRows);
+
 
 function initBricksCaleb() {
-        for (let i =0; i < brickRowCaleb * numberOfRows; i++)
+    let x = margin;
+    for (let i = 0; i < numberOfColumns * numberOfRows; i++)
         {
+            const row = Math.floor(i/numberOfRows) + 1;
+
+            x = x + brickWidthCaleb + distanceBetweenBricksCaleb;
+            if (i % numberOfRows == 0)
+                x = margin;
+        
             bricksCaleb.push({
                 hit: false,
-                x: i*70,
-                y: 15,
+                x,
+                y: row * 30,
                 color: "red",
-                width: 50,
-                height: 20
+                width: brickWidthCaleb,
+                height: 20,
+                row
             })
         }
-
 }
 
 function createBricksCaleb(){

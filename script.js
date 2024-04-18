@@ -6,7 +6,7 @@ function setup() {
     createCanvas(right, bottom);
     //noCursor();
     //initBricksCaleb();
-    initBricksDavid();
+    //initBricksDavid();
     
 }
 
@@ -24,7 +24,7 @@ function draw() {
     drawPaddleCaleb();
     createPaddleDavid();
 
-
+    createBricksCaleb();
     createBricksDavid();
   
    
