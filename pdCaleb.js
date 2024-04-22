@@ -2,7 +2,7 @@ let pdCaleb = {
     x: right / 2,
     y: 450,
     width: 100,
-    height: 5,
+    height: 100,
     color: "red"
 
 }

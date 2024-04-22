@@ -5,20 +5,31 @@ let smCaleb = {
   diameter: 50,
   moveX: 1,
   moveY: 1,
-  speedX: 10,
+  speedX: 5,
   speedY: 5
-};
+}
 
 function verfyMovmentCaleb() {
   if (smCaleb.x >= right - (smCaleb.diameter / 2) || smCaleb.x <= leftAndTop + (smCaleb.diameter / 2)) { smCaleb.moveX *= -1; }
 
+  if (
+    smCaleb.y >= pdCaleb.y - (smCaleb.diameter / 2) &&
+    smCaleb.y <= pdCaleb.y + (pdCaleb.height + smCaleb.diameter / 2) &&
+    smCaleb.x >= pdCaleb.x - (smCaleb.diameter / 2) &&
+    smCaleb.x <= pdCaleb.x + (pdCaleb.width + smCaleb.diameter / 2)
+  ) {
+    if (smCaleb.y <= pdCaleb.y)
+    {smCaleb.moveY *= -1;}
+    else
+    {smCaleb.moveX *= -1;}
+  }
   smCaleb.x += smCaleb.moveX * smCaleb.speedX;
 
   if (smCaleb.y >= bottom - (smCaleb.diameter / 2) || smCaleb.y <= leftAndTop + (smCaleb.diameter / 2)) { smCaleb.moveY *= -1; }
 
   if (
     smCaleb.y >= pdCaleb.y - (smCaleb.diameter / 2) &&
-    smCaleb.y <= pdCaleb.y + pdCaleb.height &&
+    smCaleb.y <= pdCaleb.y + (pdCaleb.height + smCaleb.diameter / 2) &&
     smCaleb.x >= pdCaleb.x - (smCaleb.diameter / 2) &&
     smCaleb.x <= pdCaleb.x + (pdCaleb.width + smCaleb.diameter / 2)
   ) {
