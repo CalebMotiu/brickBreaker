@@ -1,9 +1,18 @@
+let pdCalebWidth = 100;
+let paddleLeftCaleb = pdCalebWidth /3;
+let paddleMiddleCaleb = paddleLeftCaleb * 2;
+let paddleRightCaleb = pdCalebWidth
+
 let pdCaleb = {
     x: right / 2,
     y: 450,
-    width: 100,
-    height: 100,
-    color: "red"
+    width: pdCalebWidth,
+    height: 5,
+    color: "red",
+    left: paddleLeftCaleb,
+    middle: paddleMiddleCaleb,
+    right: paddleRightCaleb
+    
 
 }
 

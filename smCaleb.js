@@ -1,7 +1,7 @@
 
 let smCaleb = {
-  x: 100,
-  y: 150,
+  x: right / 2,
+  y: bottom / 2,
   diameter: 50,
   moveX: 1,
   moveY: 1,
@@ -18,27 +18,35 @@ function verfyMovmentCaleb() {
     smCaleb.x >= pdCaleb.x - (smCaleb.diameter / 2) &&
     smCaleb.x <= pdCaleb.x + (pdCaleb.width + smCaleb.diameter / 2)
   ) {
-    if (smCaleb.y <= pdCaleb.y)
-    {smCaleb.moveY *= -1;}
-    else
-    {smCaleb.moveX *= -1;}
+    if (smCaleb.y < pdCaleb.y) { smCaleb.moveY *= -1; }
+    else { smCaleb.moveX *= -1; }
+
   }
   smCaleb.x += smCaleb.moveX * smCaleb.speedX;
 
-  if (smCaleb.y >= bottom - (smCaleb.diameter / 2) || smCaleb.y <= leftAndTop + (smCaleb.diameter / 2)) { smCaleb.moveY *= -1; }
-
-  if (
-    smCaleb.y >= pdCaleb.y - (smCaleb.diameter / 2) &&
-    smCaleb.y <= pdCaleb.y + (pdCaleb.height + smCaleb.diameter / 2) &&
-    smCaleb.x >= pdCaleb.x - (smCaleb.diameter / 2) &&
-    smCaleb.x <= pdCaleb.x + (pdCaleb.width + smCaleb.diameter / 2)
-  ) {
-    smCaleb.moveY *= -1;
-  }
+  if ( smCaleb.y <= leftAndTop + (smCaleb.diameter / 2)) { smCaleb.moveY *= -1; }
 
   smCaleb.y += smCaleb.moveY * smCaleb.speedY;
 
 }
+
+function verfyBoxTouchCaleb(){
+  bricksCaleb.forEach(brick => {
+  if (
+    smCaleb.y >= brick.y - (smCaleb.diameter / 2) &&
+    smCaleb.y <= brick.y + (brick.height + smCaleb.diameter / 2) &&
+    smCaleb.x >= brick.x - (smCaleb.diameter / 2) &&
+    smCaleb.x <= brick.x + (brick.width + smCaleb.diameter / 2)
+  ) {
+    brick.hit = true;
+    if (smCaleb.y >= brick.y + brick.height) { smCaleb.moveY *= -1; }
+    else if(smCaleb.y <= brick.y) { smCaleb.moveY *= -1; }
+    else { smCaleb.moveX *= -1; }
+  }
+  })
+}
+
+
 function smilyFaceCaleb(x, y) {
   stroke("black");
   fill("red");
